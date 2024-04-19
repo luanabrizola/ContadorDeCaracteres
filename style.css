@@ -25,12 +25,14 @@ h1{
 
 button{
     background-color: rgb(177, 98, 252);
-    margin-left: 210px;
+    justify-content: center;
     color: white;
     border-radius: 3px;
     border: none;
     margin-top: 5px;
     height: 30px;
+    margin-left: 190px;
+    width: 250px;
 }
 
 .contador{
@@ -39,5 +41,7 @@ button{
 }
 
 textarea{
-  resize: none;
+    height: 250px;
+    width: 600px;
+    resize: none;
 }

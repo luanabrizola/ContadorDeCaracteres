@@ -1,36 +1,27 @@
-const inputTexto=document.querySelector("[input-texto]")
-const divContador=document.querySelector("[txt-contador]")
-const btnContar= document.querySelector("[btn-contar]")
-let modo="caracteres"
+const inputTexto = document.querySelector("[input-texto]")
+const divContador = document.querySelector("[txt-contador]")
+const btnContar = document.querySelector("[btn-contar]")
+let modo = "caracteres"
 
-//inputTexto.addEventListener("input", ()=>(
-//    console.log(inputTexto.value)
-//) )
 
-function handleInputTexto(evento){
-    console.log(inputTexto,value)
-    console.log(evento.target.value)
-}
-
-function handleBtnContar(evento){
-    console.log("click Contar")
-}
-
-function handleInputTexto(evento){
-    let tamanho = inputTexto.value.length
-    console.log(tamanho)
-}
-
-function handleBtnContar(evento){
-    if (modo==="caracteres"){
-        modo="palavras"
-        btnContar.innerText="Contar Palavras"
-    } else{
-        modo=="caracteres"
-        btnContar.innerText="Contar Caracteres"
+function handleBtnContar(evento) {
+    if (modo === "caracteres") {
+        modo = "palavras"
+        btnContar.innerText = "Contar Caracteres"
+    } else {
+        modo == "caracteres"
+        btnContar.innerText = "Contar Palavras"
     }
+    handleInputTexto()
 }
 
+function handleInputTexto() {
+    if (modo === "caracteres") {
+        divContador.innerText = ` ${inputTexto.value.length} caracteres`;
+    } else if (modo === "palavras") {
+        const palavras = inputTexto.value.split(" ").length;
+        divContador.innerText = `${palavras} Palavras`;}  
+}
 
 inputTexto.addEventListener("input", handleInputTexto)
-btnContar.addEventListener("click", handleInputTexto)
+btnContar.addEventListener("click", handleBtnContar)
