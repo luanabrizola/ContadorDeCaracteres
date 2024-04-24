@@ -4,13 +4,16 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
-
+:root{
+    --roxo:  #B162FC;
+    --branco: #FFFFFF;
+}
 body{
-    background-color: rgb(177, 98, 252);
+    background-color: var(--roxo);
 }
 
 .container{
-    background-color: white;
+    background-color: var(--branco);
     height: auto;
     width: 90vh;
     padding: 10px;
@@ -24,9 +27,9 @@ h1{
 }
 
 button{
-    background-color: rgb(177, 98, 252);
+    background-color: var(--roxo);
     justify-content: center;
-    color: white;
+    color: var(--branco);
     border-radius: 3px;
     border: none;
     margin-top: 5px;
@@ -45,3 +48,4 @@ textarea{
     width: 600px;
     resize: none;
 }
+
